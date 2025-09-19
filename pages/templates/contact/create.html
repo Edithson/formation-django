@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Contactez nous</h3>
+    {% if success_msg %}
+        <p> {{success_msg}} </p>
+    {% endif %}
+    
+    <form method='post'>
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+            <div>
+                {% for error in form.non_field_errors %}
+                    <p> {{error}} </p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {{form.as_p}}
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+{% endblock %}

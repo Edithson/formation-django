@@ -2,6 +2,7 @@
 
 {% block content %}
     <h3>Page de contact</h3>
+    <a href="{% url "create_contact" %}" >Créer une damande de contact</a>
     {% for contact in contacts %}
         <div style="background-color: rgb(238, 209, 145); width: 200px; height: 100px; margin: 10px; border-radius: 10px; text-align: center;">
             <h3>{{contact.name}}</h3>
