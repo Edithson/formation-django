@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(243, 216, 152);
+    font-family: sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+#nab-bar{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+table{
+    border: solid black;
+}
+
+h1{
+    text-align: center;
+}
+
+#image{
+    margin-top: 15px;
+    display: block;
+    width: 300px;
+    height: 200px;
+    border-radius: 10%;
+}

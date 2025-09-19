@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First App Django</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Mon site à moi ;)</h1>
+        <div id="nab-bar">
+            <nav>
+                <a href="/">Accueil</a>
+                <a href="/contact">Contact</a>
+                <a href="/info">Info</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        {% block content %}
+            <p>Le contenue</p>
+        {% endblock %}
+    </main>
+    <footer>
+        2025 - ©Tout doits réservés
+    </footer>
+</body>
+</html>

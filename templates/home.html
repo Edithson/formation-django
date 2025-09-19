@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div>
+        <h3>Accueil</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, quo nulla? Tempora neque quam nihil, vero accusamus et dolorum animi minima aut laborum explicabo reiciendis aliquam quibusdam corrupti obcaecati praesentium a itaque at expedita natus non. Corrupti accusamus molestiae animi asperiores quisquam ex, temporibus earum nulla sint, vitae, et aut quo architecto! Nemo culpa dignissimos perspiciatis eveniet mollitia et sit eum voluptatibus, cum eaque nisi officiis magnam ipsa nobis blanditiis non numquam placeat quaerat, dolore commodi maiores! Consequatur, sint soluta laudantium ducimus natus doloremque aut asperiores! Culpa aliquid sit obcaecati laudantium velit nihil quod assumenda dolorem? Cumque illo iste voluptas.</p>
+        <h4>Ou sont les données ?</h4>
+        <table>
+            <tr>
+               <th>Nom</th> 
+               <th>Age</th> 
+               <th>Genre</th> 
+               <th>Taches</th> 
+            </tr>
+            <tr>
+                <td>{{ nom|upper }}</td>
+                <td>{{ age }}</td>
+                <td>
+                    {% if genre == 'M' %}
+                        Masculin
+                    {% else %}
+                        Féminin
+                    {% endif %}
+                </td>
+                <td>
+                    <ul>
+                        {% for tache in taches %}
+                            <li>{{tache}}</li>
+                        {% empty %}
+                            Aucune tache
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <img id="image" src="{% static 'media/night_sky.png' %}" alt="Ciel étoilé de nuit">
+        </div>
+    </div>
+{% endblock %}
